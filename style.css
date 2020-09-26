@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: rgba(63, 197, 207, 0.425);
+}
+
+.accordion {
+    max-width: 700px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    padding: 20px;
+}
+
+.accordion img {
+    width: 380px;
+    /* text-align: center; */
+    margin: -20px auto;
+    padding-bottom: 0;
+}
+
+.accordion h2 {
+    text-align: center;
+    font-size: 30px;
+    padding: 20px;
+    /* margin-top: -10px; */
+}
+
+.accordion .content-box {
+    position: relative;
+    margin: 5px;
+}
+
+.accordion .content-box .label {
+    background-color: rgb(44, 162, 170);
+    color: white;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: 500;
+    /* border-radius: 10px 10px 0 0;
+    -webkit-border-radius: 10px 10px 0 0;
+    -moz-border-radius: 10px 10px 0 0;
+    -ms-border-radius: 10px 10px 0 0;
+    -o-border-radius: 10px 10px 0 0; */
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}
+
+.accordion .content-box .label::before {
+    content: '+';
+    color: white;
+    position: absolute;
+    font-size: 20px;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+.accordion .content-box.active .label::before {
+    content: '';
+    width: 10px;
+    height: 3px;
+    background-color: #fff;
+}
+
+.accordion .content-box .content {
+    height: 0;
+    background-color: #fff;
+    font-size: 17px;
+    position: relative;
+    overflow: hidden;
+    line-height: 22px;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+    white-space: normal;
+}
+
+.accordion .content-box.active .content {
+    height: auto;
+    padding: 10px 35px;
+    overflow: auto;
+}
+
+.content ul li.head {
+    list-style: none;
+    font-size: 19px;
+    font-weight: 600;
+}
